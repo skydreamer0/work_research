@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esvatin 中文網站簡報</title>
+  <title>Esvatin 中文網站與簡報模式</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="page-shell" id="top">
-    <header class="control-bar" aria-label="控制列">
+  <div class="page-shell">
+    <header class="control-bar" aria-label="網站控制列">
       <div class="control-branding">
-        <p class="control-kicker">Esvatin 網頁簡報</p>
-        <p class="control-subtitle">中文外殼、雙版本內容與簡報模式切換</p>
+        <p class="control-kicker">Esvatin 中文展示頁</p>
+        <p class="control-subtitle">同一份內容，切換內部培訓 / 保守對外版本，也能一鍵進入簡報模式。</p>
       </div>
       <div class="control-actions">
-        <div class="version-switcher" role="tablist" aria-label="內容版本">
-          <button type="button" class="version-button is-active" data-version-toggle="internal" aria-pressed="true">
-            內部培訓版
-          </button>
-          <button type="button" class="version-button" data-version-toggle="external" aria-pressed="false">
-            對外保守版
-          </button>
+        <div class="version-switcher" aria-label="內容版本切換">
+          <button type="button" class="version-button is-active" data-version-toggle="internal" aria-pressed="true">內部培訓</button>
+          <button type="button" class="version-button" data-version-toggle="external" aria-pressed="false">保守對外</button>
         </div>
-        <input id="presentation-mode" class="presentation-toggle" type="checkbox" aria-label="切換簡報模式">
+        <input id="presentation-mode" class="presentation-toggle" type="checkbox" aria-label="簡報模式">
         <label class="presentation-switch" for="presentation-mode">
           <span class="presentation-switch-track" aria-hidden="true"></span>
           <span class="presentation-switch-text">簡報模式</span>
@@ -32,23 +28,19 @@
 
     <div class="mode-hint">
       <span>網站模式</span>
-      <span>適合往下閱讀與版本比對</span>
+      <span>適合往下閱讀完整內容與比對版本。</span>
       <span>簡報模式</span>
-      <span>轉成全螢幕投影片節奏</span>
+      <span>聚焦單一頁面重點，支援左右鍵切換與 Esc 離開。</span>
     </div>
 
     <div class="site-mode">
       <header class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Esvatin 網頁簡報</p>
-          <h1 id="hero-title">Esvatin: Precision Local Estrogen Therapy for Genitourinary Health</h1>
-          <p id="hero-subtitle" class="hero-subtitle">
-            A dual-mode page that reframes the slide deck as a calm, evidence-linked web narrative.
-          </p>
+          <p class="eyebrow">Esvatin Web Presentation</p>
+          <h1 id="hero-title"></h1>
+          <p id="hero-subtitle" class="hero-subtitle"></p>
           <div class="hero-actions">
-            <p id="hero-note" class="hero-note">
-              你可以先看網站模式，再切到簡報模式，兩種閱讀節奏共用同一份內容架構。
-            </p>
+            <p id="hero-note" class="hero-note"></p>
           </div>
         </div>
         <aside class="hero-panel">
@@ -57,27 +49,27 @@
             <ol id="reading-path" class="reading-path"></ol>
           </div>
           <div class="panel-card panel-card-accent">
-            <p class="card-label">傳訊基調</p>
+            <p class="card-label">訊息姿態</p>
             <p id="stance-title" class="stance-title"></p>
             <p id="stance-body" class="stance-body"></p>
           </div>
         </aside>
       </header>
 
-      <nav class="section-nav" aria-label="區段導覽">
+      <nav class="section-nav" aria-label="段落導覽">
         <a href="#understanding-gsm">認識 GSM</a>
         <a href="#clinical-impact">臨床影響</a>
         <a href="#mechanism-response">機轉與組織反應</a>
-        <a href="#evidence-outcomes">證據與數據</a>
-        <a href="#safety-discipline">安全性與傳訊邊界</a>
-        <a href="#practical-considerations">實務考量</a>
-        <a href="#takeaways">重點整理</a>
+        <a href="#evidence-outcomes">證據與結果</a>
+        <a href="#safety-discipline">安全性與訊息邊界</a>
+        <a href="#practical-considerations">實務重點</a>
+        <a href="#takeaways">結語</a>
       </nav>
 
       <main>
         <section class="overview-grid">
           <article class="overview-card">
-            <p class="card-label">版本意圖</p>
+            <p class="card-label">版本定位</p>
             <h2 id="overview-title"></h2>
             <p id="overview-summary"></p>
           </article>
@@ -86,10 +78,8 @@
             <ul id="audience-list" class="pill-list"></ul>
           </article>
           <article class="overview-card">
-            <p class="card-label">來源轉譯</p>
-            <p>
-              本頁把原始投影片整理成可閱讀的網站章節，同時保留對證據、用語與訊息邊界的控制。
-            </p>
+            <p class="card-label">內容原則</p>
+            <p>產品層級僅保留已驗證的 Esvatin 事實，其餘療效、安全與機轉以 estriol 或 local-estrogen 類別證據為主，避免把 class-level 證據誤寫成產品專屬結論。</p>
           </article>
         </section>
 
@@ -98,7 +88,7 @@
             <p class="section-kicker">01</p>
             <div>
               <h2>認識 GSM</h2>
-              <p>先建立疾病基礎，再進入治療邏輯。</p>
+              <p>先建立疾病理解，再進入治療與產品情境。</p>
             </div>
           </div>
           <div class="two-column">
@@ -123,7 +113,7 @@
             <p class="section-kicker">02</p>
             <div>
               <h2>臨床影響</h2>
-              <p>把症狀、生活品質與辨識需求串起來。</p>
+              <p>把症狀、日常負擔與辨識需求串成一條清楚的線。</p>
             </div>
           </div>
           <div id="impact-flow" class="impact-flow"></div>
@@ -134,7 +124,7 @@
             <p class="section-kicker">03</p>
             <div>
               <h2>機轉與組織反應</h2>
-              <p>把論述維持在局部、實務與可驗證範圍內。</p>
+              <p>聚焦可防守的組織層次敘述，不延伸到風險較高的細節。</p>
             </div>
           </div>
           <div id="mechanism-columns" class="three-column"></div>
@@ -144,8 +134,8 @@
           <div class="section-heading">
             <p class="section-kicker">04</p>
             <div>
-              <h2>證據與數據</h2>
-              <p>把 pooled findings 轉成可閱讀的網頁元件。</p>
+              <h2>證據與結果</h2>
+              <p>把 pooled evidence 轉成可讀的圖卡與數據訊號。</p>
             </div>
           </div>
           <div class="evidence-layout">
@@ -165,8 +155,8 @@
           <div class="section-heading">
             <p class="section-kicker">05</p>
             <div>
-              <h2>安全性與傳訊邊界</h2>
-              <p>清楚標示可以說什麼，以及哪些地方要收斂。</p>
+              <h2>安全性與訊息邊界</h2>
+              <p>哪些可以放心說，哪些必須收斂在保守措辭內。</p>
             </div>
           </div>
           <div class="two-column">
@@ -175,7 +165,7 @@
               <p id="safety-summary"></p>
             </article>
             <article class="caution-card">
-              <p class="card-label">訊息守則</p>
+              <p class="card-label">Guardrails</p>
               <ul id="guardrail-list" class="guardrail-list"></ul>
             </article>
           </div>
@@ -185,8 +175,8 @@
           <div class="section-heading">
             <p class="section-kicker">06</p>
             <div>
-              <h2>實務考量</h2>
-              <p>把劑型、接受度與比較語句維持在證據支撐的比例內。</p>
+              <h2>實務重點</h2>
+              <p>把 formulation、接受度與 persistence 放在正確的證據層級上。</p>
             </div>
           </div>
           <div id="practical-cards" class="practical-grid"></div>
@@ -196,8 +186,8 @@
           <div class="section-heading">
             <p class="section-kicker">07</p>
             <div>
-              <h2>重點整理</h2>
-              <p>用版本化的語氣收束整份內容。</p>
+              <h2>結語</h2>
+              <p>收斂成各版本各自最應該留下的訊息。</p>
             </div>
           </div>
           <div id="takeaway-cards" class="takeaway-grid"></div>
@@ -205,225 +195,24 @@
       </main>
     </div>
 
-    <section class="presentation-stage" aria-label="簡報模式投影片">
+    <section class="presentation-stage" aria-label="簡報模式">
       <div class="presentation-frame">
         <header class="presentation-header">
           <div>
-            <p class="presentation-kicker">簡報模式</p>
-            <h2>中文投影片版面</h2>
+            <p class="presentation-kicker">Presentation Mode</p>
+            <h2 id="presentation-title"></h2>
           </div>
-          <p class="presentation-summary">
-            使用目前選取的內容版本，切成更接近簡報的節奏與畫面比例。
-          </p>
+          <div>
+            <p id="presentation-summary" class="presentation-summary"></p>
+            <p id="slide-counter" class="presentation-summary">簡報頁次 1 / 7</p>
+          </div>
         </header>
-
-        <div class="presentation-deck" data-version="internal">
-          <article class="slide slide-cover">
-            <div class="slide-topline">01 / 07</div>
-            <h3>內部培訓版</h3>
-            <p class="slide-subtitle">從疾病認知一路走到證據、邊界與訊息訓練。</p>
-            <div class="slide-hero-grid">
-              <div class="slide-card slide-card-soft">
-                <span class="slide-caption">主軸</span>
-                <strong>GSM、局部雌激素治療與 field-ready messaging</strong>
-              </div>
-              <div class="slide-card">
-                <span class="slide-caption">產品事實</span>
-                <strong>Esvatin 是 estriol 0.5 mg 陰道錠</strong>
-              </div>
-            </div>
-            <a class="slide-link" href="#slide-internal-2">下一頁</a>
-          </article>
-
-          <article class="slide" id="slide-internal-2">
-            <div class="slide-topline">02 / 07</div>
-            <h3>認識 GSM</h3>
-            <ul class="slide-bullets">
-              <li>GSM 是停經後常見的泌尿生殖系症候群，與雌激素下降相關。</li>
-              <li>它會影響外陰、陰道、尿道與膀胱等多個組織。</li>
-              <li>先建立疾病基礎，再進入治療討論，會讓對話更穩定。</li>
-            </ul>
-            <a class="slide-link" href="#slide-internal-3">下一頁</a>
-          </article>
-
-          <article class="slide" id="slide-internal-3">
-            <div class="slide-topline">03 / 07</div>
-            <h3>為什麼 GSM 重要</h3>
-            <ul class="slide-bullets">
-              <li>常見症狀包含乾燥、刺激感、dyspareunia 與泌尿不適。</li>
-              <li>這些症狀會影響舒適、親密關係與日常生活品質。</li>
-              <li>不少患者不會主動提起，因此辨識與傾聽很重要。</li>
-            </ul>
-            <a class="slide-link" href="#slide-internal-4">下一頁</a>
-          </article>
-
-          <article class="slide" id="slide-internal-4">
-            <div class="slide-topline">04 / 07</div>
-            <h3>機轉與組織反應</h3>
-            <ul class="slide-bullets">
-              <li>重點是局部組織層級的 estrogenic activity，而不是過度延伸的機轉敘述。</li>
-              <li>上皮成熟與萎縮性黏膜改善，是較容易站得住腳的說法。</li>
-              <li>精準的 collagen 或 vascular claims 要避免。</li>
-            </ul>
-            <a class="slide-link" href="#slide-internal-5">下一頁</a>
-          </article>
-
-          <article class="slide" id="slide-internal-5">
-            <div class="slide-topline">05 / 07</div>
-            <h3>證據與數據</h3>
-            <div class="slide-metric-grid">
-              <div class="slide-metric">
-                <span>superficial cells</span>
-                <strong>+19.28%</strong>
-              </div>
-              <div class="slide-metric">
-                <span>parabasal cells</span>
-                <strong>-24.85%</strong>
-              </div>
-              <div class="slide-metric">
-                <span>vaginal pH</span>
-                <strong>-0.94</strong>
-              </div>
-              <div class="slide-metric">
-                <span>dyspareunia</span>
-                <strong>-0.52</strong>
-              </div>
-            </div>
-            <p class="slide-footnote">這些都是 pooled evidence，應該被視為 meta-analytic support，而不是產品專屬結果。</p>
-            <a class="slide-link" href="#slide-internal-6">下一頁</a>
-          </article>
-
-          <article class="slide" id="slide-internal-6">
-            <div class="slide-topline">06 / 07</div>
-            <h3>安全性與實務考量</h3>
-            <div class="slide-quote-grid">
-              <div class="slide-quote">
-                <span class="slide-caption">安全性</span>
-                <p>reviewed studies did not identify clinically relevant long-term serum hormone changes.</p>
-              </div>
-              <div class="slide-quote">
-                <span class="slide-caption">實務</span>
-                <p>劑型會影響 convenience、acceptance 與 persistence，但不能直接推成 efficacy superiority。</p>
-              </div>
-            </div>
-            <a class="slide-link" href="#slide-internal-7">下一頁</a>
-          </article>
-
-          <article class="slide slide-close" id="slide-internal-7">
-            <div class="slide-topline">07 / 07</div>
-            <h3>重點整理</h3>
-            <ul class="slide-bullets">
-              <li>先講 GSM，再講治療，讓疾病與治療邏輯先站穩。</li>
-              <li>用 pooled evidence 支撐症狀與細胞學改善。</li>
-              <li>產品定位只保留可驗證的 Esvatin facts。</li>
-            </ul>
-            <a class="slide-link" href="#top">回到上方</a>
-          </article>
+        <div class="presentation-toolbar">
+          <button type="button" class="version-button" data-slide-nav="prev">上一頁</button>
+          <button type="button" class="version-button" data-slide-nav="next">下一頁</button>
         </div>
-
-        <div class="presentation-deck" data-version="external">
-          <article class="slide slide-cover">
-            <div class="slide-topline">01 / 07</div>
-            <h3>對外保守版</h3>
-            <p class="slide-subtitle">保留疾病到治療的主線，但把語氣收斂到 review-friendly 的層級。</p>
-            <div class="slide-hero-grid">
-              <div class="slide-card slide-card-soft">
-                <span class="slide-caption">主軸</span>
-                <strong>用最穩定的證據講清楚 GSM 與局部治療</strong>
-              </div>
-              <div class="slide-card">
-                <span class="slide-caption">限制</span>
-                <strong>避免比較過度、避免把 pooled data 誤讀成產品效果</strong>
-              </div>
-            </div>
-            <a class="slide-link" href="#slide-external-2">下一頁</a>
-          </article>
-
-          <article class="slide" id="slide-external-2">
-            <div class="slide-topline">02 / 07</div>
-            <h3>認識 GSM</h3>
-            <ul class="slide-bullets">
-              <li>GSM 是停經後與雌激素下降相關的泌尿生殖系變化。</li>
-              <li>它可能牽涉外陰、陰道、尿道與膀胱。</li>
-              <li>一個簡單、清楚的疾病基礎已足夠支撐治療理解。</li>
-            </ul>
-            <a class="slide-link" href="#slide-external-3">下一頁</a>
-          </article>
-
-          <article class="slide" id="slide-external-3">
-            <div class="slide-topline">03 / 07</div>
-            <h3>為什麼 GSM 重要</h3>
-            <ul class="slide-bullets">
-              <li>核心症狀仍是乾燥、刺激感、dyspareunia 與泌尿不適。</li>
-              <li>重點是舒適與生活品質，不需要把語氣推高。</li>
-              <li>患者不一定會主動提起，因此辨識仍然重要。</li>
-            </ul>
-            <a class="slide-link" href="#slide-external-4">下一頁</a>
-          </article>
-
-          <article class="slide" id="slide-external-4">
-            <div class="slide-topline">04 / 07</div>
-            <h3>機轉與組織反應</h3>
-            <ul class="slide-bullets">
-              <li>保留 local estrogenic tissue effects 的主題即可。</li>
-              <li>上皮成熟與萎縮性黏膜改善，是較保守也較安全的表述。</li>
-              <li>更細的 histology 句型先不要往前推。</li>
-            </ul>
-            <a class="slide-link" href="#slide-external-5">下一頁</a>
-          </article>
-
-          <article class="slide" id="slide-external-5">
-            <div class="slide-topline">05 / 07</div>
-            <h3>證據與數據</h3>
-            <div class="slide-metric-grid">
-              <div class="slide-metric">
-                <span>superficial cells</span>
-                <strong>+19.28%</strong>
-              </div>
-              <div class="slide-metric">
-                <span>parabasal cells</span>
-                <strong>-24.85%</strong>
-              </div>
-              <div class="slide-metric">
-                <span>vaginal pH</span>
-                <strong>-0.94</strong>
-              </div>
-              <div class="slide-metric">
-                <span>dyspareunia</span>
-                <strong>-0.52</strong>
-              </div>
-            </div>
-            <p class="slide-footnote">這些數字保留為 pooled evidence 的支持，不直接轉譯成產品專屬結論。</p>
-            <a class="slide-link" href="#slide-external-6">下一頁</a>
-          </article>
-
-          <article class="slide" id="slide-external-6">
-            <div class="slide-topline">06 / 07</div>
-            <h3>安全性與實務考量</h3>
-            <div class="slide-quote-grid">
-              <div class="slide-quote">
-                <span class="slide-caption">安全性</span>
-                <p>review did not identify clinically relevant long-term serum hormone changes.</p>
-              </div>
-              <div class="slide-quote">
-                <span class="slide-caption">實務</span>
-                <p>劑型、便利性與接受度可以談，但不要直接擴成效能優勢。</p>
-              </div>
-            </div>
-            <a class="slide-link" href="#slide-external-7">下一頁</a>
-          </article>
-
-          <article class="slide slide-close" id="slide-external-7">
-            <div class="slide-topline">07 / 07</div>
-            <h3>重點整理</h3>
-            <ul class="slide-bullets">
-              <li>疾病邏輯先站穩，再進入治療與證據。</li>
-              <li>保留最有把握的 pooled findings。</li>
-              <li>產品 claims 限縮在可驗證的 Esvatin 事實。</li>
-            </ul>
-            <a class="slide-link" href="#top">回到上方</a>
-          </article>
-        </div>
+        <div id="presentation-internal" class="presentation-deck" data-version="internal"></div>
+        <div id="presentation-external" class="presentation-deck" data-version="external"></div>
       </div>
     </section>
   </div>
