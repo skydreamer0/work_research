@@ -8,15 +8,18 @@
 </head>
 <body>
   <div class="page-shell">
-    <header class="control-bar" aria-label="網站控制列">
-      <div class="control-branding">
-        <p class="control-kicker">Esvatin 中文展示頁</p>
-        <p class="control-subtitle">同一份內容，切換內部培訓 / 保守對外版本，也能一鍵進入簡報模式。</p>
+    <header class="masthead" aria-label="網站控制列">
+      <div class="masthead-brand">
+        <p class="masthead-kicker">Esvatin 臨床培訓門戶</p>
+        <div class="masthead-title-group">
+          <p class="masthead-title">Esvatin Clinical Training Portal</p>
+          <p class="masthead-subtitle">基於實證的 GSM 疾病認知與產品溝通指南。</p>
+        </div>
       </div>
-      <div class="control-actions">
+      <div class="masthead-tools">
         <div class="version-switcher" aria-label="內容版本切換">
-          <button type="button" class="version-button is-active" data-version-toggle="internal" aria-pressed="true">內部培訓</button>
-          <button type="button" class="version-button" data-version-toggle="external" aria-pressed="false">保守對外</button>
+          <button type="button" class="version-button is-active" data-version-toggle="internal" aria-pressed="true">內部完整說明版</button>
+          <button type="button" class="version-button" data-version-toggle="external" aria-pressed="false">對外精簡版</button>
         </div>
         <input id="presentation-mode" class="presentation-toggle" type="checkbox" aria-label="簡報模式">
         <label class="presentation-switch" for="presentation-mode">
@@ -27,16 +30,15 @@
     </header>
 
     <div class="mode-hint">
-      <span>網站模式</span>
-      <span>適合往下閱讀完整內容與比對版本。</span>
-      <span>簡報模式</span>
-      <span>聚焦單一頁面重點，支援左右鍵切換與 Esc 離開。</span>
+      <p><span>網站模式</span>適合往下閱讀完整內容與比對版本。</p>
+      <p><span>簡報模式</span>聚焦單一頁面重點，支援左右鍵切換與 <kbd>Esc</kbd> 離開。</p>
     </div>
 
     <div class="site-mode">
       <header class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Esvatin Web Presentation</p>
+          <p class="eyebrow">Esvatin Clinical Training</p>
+          <p class="hero-lead">此培訓網站將引導您從疾病認知開始，理解局部雌激素治療的邏輯與實務溝通要點。</p>
           <h1 id="hero-title"></h1>
           <p id="hero-subtitle" class="hero-subtitle"></p>
           <div class="hero-actions">
@@ -78,8 +80,8 @@
             <ul id="audience-list" class="pill-list"></ul>
           </article>
           <article class="overview-card">
-            <p class="card-label">內容原則</p>
-            <p>產品層級僅保留已驗證的 Esvatin 事實，其餘療效、安全與機轉以 estriol 或 local-estrogen 類別證據為主，避免把 class-level 證據誤寫成產品專屬結論。</p>
+            <p class="card-label">課程目標</p>
+            <p>將實證資料轉換為業務溝通的基礎。區分「已驗證產品事實」與「類別層級研究」，並掌握安全保守的合規表達方式。</p>
           </article>
         </section>
 

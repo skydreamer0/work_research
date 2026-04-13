@@ -19,10 +19,11 @@ $js = Get-Content -Raw -LiteralPath $jsPath
 
 $htmlChecks = @(
     "data-version-toggle",
-    "hero-title",
-    "reading-path",
-    "section-nav",
-    "takeaway-cards"
+    "presentation-mode",
+    "presentation-internal",
+    "presentation-external",
+    "slide-counter",
+    "hero-title"
 )
 
 foreach ($needle in $htmlChecks) {
@@ -36,7 +37,9 @@ $cssChecks = @(
     ".section-nav a::before",
     ".section-nav a:hover",
     ".version-button.is-active",
-    ".bar-fill"
+    ".bar-fill",
+    "body.is-presentation-mode",
+    ".presentation-toolbar"
 )
 
 foreach ($needle in $cssChecks) {
@@ -47,16 +50,46 @@ foreach ($needle in $cssChecks) {
 
 $jsChecks = @(
     "contentByVersion",
-    "internal",
-    "external",
-    "renderSections",
-    "renderList",
+    "renderSite",
+    "renderPresentation",
+    "setViewMode",
+    "goToSlide",
+    "setVersion(""internal"")",
     "data-version-toggle"
 )
 
 foreach ($needle in $jsChecks) {
     if (-not $js.Contains($needle)) {
         throw "JavaScript is missing expected marker: $needle"
+    }
+}
+
+$requiredTeachingMarkers = @(
+    "Product Fact",
+    "Class-Level Evidence",
+    "Use with caution",
+    "What to say",
+    "What not to say"
+)
+
+foreach ($needle in $requiredTeachingMarkers) {
+    if (-not ($html.Contains($needle) -or $js.Contains($needle))) {
+        throw "Training site is missing expected teaching marker: $needle"
+    }
+}
+
+$requiredCleanMarkers = @(
+    "PM Training Console",
+    "Evidence boundary",
+    "Product Fact",
+    "Class-Level Evidence",
+    "What to say",
+    "What not to say"
+)
+
+foreach ($needle in $requiredCleanMarkers) {
+    if (-not ($html.Contains($needle) -or $js.Contains($needle))) {
+        throw "Site is missing expected clean content marker: $needle"
     }
 }
 
