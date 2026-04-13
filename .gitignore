@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+.vscode/
+.idea/
+
+*.log
+*.tmp
+*.temp
+
+node_modules/
+dist/
+build/
+
+coverage/
+.nyc_output/
