@@ -19,10 +19,10 @@ $js = Get-Content -Raw -LiteralPath $jsPath
 
 $htmlChecks = @(
     "data-version-toggle",
-    "內部培訓",
-    "網站模式",
-    "簡報模式",
-    "簡報頁次"
+    "hero-title",
+    "reading-path",
+    "section-nav",
+    "takeaway-cards"
 )
 
 foreach ($needle in $htmlChecks) {
@@ -35,8 +35,8 @@ $cssChecks = @(
     "scroll-margin-top",
     ".section-nav a::before",
     ".section-nav a:hover",
-    "body.is-presentation-mode",
-    ".presentation-toolbar"
+    ".version-button.is-active",
+    ".bar-fill"
 )
 
 foreach ($needle in $cssChecks) {
@@ -46,12 +46,12 @@ foreach ($needle in $cssChecks) {
 }
 
 $jsChecks = @(
+    "contentByVersion",
     "internal",
     "external",
-    "presentation",
-    "setViewMode",
-    "goToSlide",
-    "簡報模式"
+    "renderSections",
+    "renderList",
+    "data-version-toggle"
 )
 
 foreach ($needle in $jsChecks) {
